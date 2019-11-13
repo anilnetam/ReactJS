@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html>
+    <script>
+            let set = new Set()
+            set.add(1);
+            set.add(2);
+            set.add(3);
+            console.log(set); //{1, 2, 3}
+            console.log(set.has(3)); //true
+            set.delete(3)
+            console.log(set); //{1, 2}
+
+            for(let value of set){
+                console.log(value); //1,2
+            }
+            set.clear();
+            console.log(set); //{}
+    </script>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <script>
+            let set = new Set();
+            set.add(1);
+            set.add(2);
+            set.add(3);
+            console.log(set); //{1, 2, 3}
+            //convert Set to Array (two ways)
+            var ary = [...set];
+            console.log(ary); //[1, 2, 3]
+
+            var ary1 = Array.from(set);
+            console.log(ary1); //[1, 2, 3]
+    </script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+    <script>
+        let ary = [1,2,3,4,5,1,2,3];
+        let set = new Set(ary);
+        console.log(set);  //{1, 2, 3, 4, 5}
+
+        console.log([...new Set(ary)]); //[1, 2, 3, 4, 5]
+        //remove duplicate element and return equivalent array
+    </script>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <script>
+        let set = new Set();
+        set.add({a:1}).add({b:2});
+        console.log(set); //{{…}, {…}}
+        
+        console.log(set.add(3));
+        for(let value of set){
+                console.log(value);//{a: 1}
+                                   //{b: 2}
+        };
+        console.log(set.has({a:1})); //false
+        //has function works with only primitives.
+        // has function won't shows the Appropriate result for referenced data type
+
+        console.log(set.has(3)); //true
+    </script>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <script>
+        var ws = new WeakMap();
+        console.dir(ws);
+        ws.add({a:1});
+        console.log(ws);
+        console.log(ws.has({a:1}));
+    </script>
+</html> -->
